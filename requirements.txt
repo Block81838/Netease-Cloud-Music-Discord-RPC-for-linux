@@ -1,0 +1,4 @@
+pycparser==2.20
+PyGObject==3.40.1
+PyGObject-stubs==0.0.2
+pypresence==4.2.0
