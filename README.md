@@ -13,3 +13,8 @@ Second, run the main file
 Gallary
 
 ![Discord Rich Presence](https://user-images.githubusercontent.com/22847876/115551934-8fea7700-a260-11eb-9c39-a2286fb81d00.png)
+
+TODOS
+
+- [ ] Time display
+- [ ] Exceptions Catch
