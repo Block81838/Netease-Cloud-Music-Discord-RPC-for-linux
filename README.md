@@ -17,4 +17,5 @@ Gallary
 TODOS
 
 - [ ] Time display
-- [ ] Exceptions Catch
+- [ ] Systemd unit service
+- [ ] Pack
