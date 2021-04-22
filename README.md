@@ -6,7 +6,7 @@ A discord rich presence for netease cloud music official linux desktop app
 
 First, install must-have requirements
 ```bash
-pip install -i requirements.txt
+pip install -r requirements.txt
 ```
 Second, run the main file
 
