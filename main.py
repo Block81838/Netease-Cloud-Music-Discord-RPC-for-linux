@@ -58,7 +58,10 @@ def get_song_info(plr):
 
 
 def update_info(plr):
-	title, artist, status = get_song_info(plr)
+	t_title, artist, status = get_song_info(plr)
+	if len(t_title) <= 2:
+		title = t_title + " "
+	else: title = t_title
 	if status == 0:
 		status_mark = "playing"
 	elif status == 1 or status == 2:
