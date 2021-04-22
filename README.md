@@ -8,7 +8,7 @@ First, install must-have requirements
 ```bash
 pip install -r requirements.txt
 ```
-Second, run the main file
+Second, Run the install script
 
 Gallary
 
