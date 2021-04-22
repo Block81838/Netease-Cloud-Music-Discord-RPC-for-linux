@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Netease Discord RPC
+Comment=A Discord RPC for Netease Cloud Music Official Desktop App
+Exec=discordrpc
+Categories=Utility;GTK

@@ -1,0 +1,16 @@
+#!/usr/bin/python
+import os
+import shutil
+import time
+if os.geteuid() != 0:
+	print("Please run this script with root privilege")
+	exit(0)
+os.system("clear")
+print("Starting installation")
+shutil.copy("./main.py", "/usr/bin/discordrpc")
+os.system("desktop-file-install ./NeteaseDiscordRPC.desktop")
+os.chmod("/usr/bin/discordrpc", 0o755)
+print("Installed")
+time.sleep(1)
+os.system("clear")
+print("Run discordrpc or Launch the app called Netease Discord RPC in desktop menu")
