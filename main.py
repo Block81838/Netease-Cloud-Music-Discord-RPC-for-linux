@@ -67,7 +67,7 @@ def update_info(plr):
 	elif status == 1 or status == 2:
 		status_mark = "pausing"
 	try:
-		rpc.update(details=title, state=artist, large_image="neteaseicon", small_image=status_mark, \
+		rpc.update(details=title, state=artist, large_image="netease", small_image=status_mark, \
 	            large_text="Netease Cloud Music", small_text=status_mark)
 	except BrokenPipeError as e:
 		os.system("notify-send Discord\ RPC Lost\ connection\ to\ Discord,\ reconnecting")
