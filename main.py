@@ -31,22 +31,13 @@ def connect_to_rpc():
 
 def init_player(name):
 	ncm = Playerctl.Player.new_from_name(name)
-	ncm.connect("playback-status::playing", on_playing)
-	ncm.connect("playback-status::paused", on_paused)
-	ncm.connect("metadata", on_metadata)
+	ncm.connect("playback-status", on_change)
+	ncm.connect("metadata", on_change)
 	manager.manage_player(ncm)
 	update_info(ncm)
 
 
-def on_playing(plr, sts):
-	update_info(plr)
-
-
-def on_paused(plr, sts):
-	update_info(plr)
-
-
-def on_metadata(plr, metadata):
+def on_change(plr, *args):
 	update_info(plr)
 
 
@@ -55,7 +46,7 @@ def on_name_appear(plr, name):
 		init_player(name)
 
 
-def on_name_vanish(plr, name):
+def on_name_vanish(*args):
 	rpc.clear()
 
 
@@ -78,7 +69,7 @@ def update_info(plr):
 	except BrokenPipeError as e:
 		os.system("notify-send Discord\ RPC Lost\ connection\ to\ Discord,\ reconnecting")
 	except InvalidID as e:
-		os.system("notify-send Discord\ RPC Lost\ connection\ to\ Discord,\ reconnecting")
+		os.system("notify-send Discord\ RPC Lost\ connection\ Discord,\ reconnecting")
 		connect_to_rpc()
 
 
@@ -86,7 +77,6 @@ def main():
 	connect_to_rpc()
 	manager.connect("name-appeared", on_name_appear)
 	manager.connect("player-vanished", on_name_vanish)
-
 	for player in manager.props.player_names:
 		if player.name == "netease-cloud-music":
 			init_player(player)
