@@ -11,6 +11,7 @@ pip install -r requirements.txt
 Second, Run the install script
 
 Gallary
+
 ![Discord RPC](https://user-images.githubusercontent.com/22847876/115799024-6e86a980-a38c-11eb-94b1-499e1523fabe.png)
 
 TODOS
