@@ -12,10 +12,11 @@ Second, Run the install script
 
 Gallary
 
-![Discord RPC](https://user-images.githubusercontent.com/22847876/115799024-6e86a980-a38c-11eb-94b1-499e1523fabe.png)
+![Discord RPC](https://user-images.githubusercontent.com/22847876/124348863-4643d400-dba1-11eb-99f2-b4eaa6624541.png)
+
 
 TODOS
 
-- [ ] Time display
+- [x] Time display
 - [ ] Systemd unit service
-- [ ] Pack
+- [ ] Tray Icon
